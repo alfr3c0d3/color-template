@@ -11,39 +11,39 @@ import * as global                               from './config/globals';
 
 // Main Component
 import { AppComponent }                    from './app.component';
-import { HeaderComponent }                 from './components/header/header.component';
-import { SidebarComponent }                from './components/sidebar/sidebar.component';
-import { SidebarRightComponent }           from './components/sidebar-right/sidebar-right.component';
-import { TopMenuComponent }                from './components/top-menu/top-menu.component';
-import { FooterComponent }                 from './components/footer/footer.component';
-import { PanelComponent }                  from './components/panel/panel.component';
-import { FloatSubMenuComponent }           from './components/float-sub-menu/float-sub-menu.component';
+// import { HeaderComponent }                 from './layout/header/header.component';
+// import { SidebarComponent }                from './layout/sidebar/sidebar.component';
+// import { SidebarRightComponent }           from './layout/sidebar-right/sidebar-right.component';
+// import { TopMenuComponent }                from './layout/top-menu/top-menu.component';
+// import { FooterComponent }                 from './layout/footer/footer.component';
+// import { PanelComponent }                  from './layout/panel/panel.component';
+// import { FloatSubMenuComponent }           from './layout/float-sub-menu/float-sub-menu.component';
 
 
 // Component Module
-import { AgmCoreModule }                   from '@agm/core';
-import { FullCalendarModule }              from '@fullcalendar/angular';
-import { LoadingBarRouterModule }          from '@ngx-loading-bar/router';
-import { NgxChartsModule }                 from '@swimlane/ngx-charts';
-import { TrendModule }                     from 'ngx-trend';
-import { HighlightJsModule }               from 'ngx-highlight-js';
-import { CountdownModule }                 from 'ngx-countdown';
-import { ChartsModule }                    from 'ng4-charts/ng4-charts';
-import { TagInputModule }                  from 'ngx-chips';
-import { SweetAlert2Module }               from '@sweetalert2/ngx-sweetalert2';
-import { Ng2TableModule }                  from 'ngx-datatable/ng2-table';
-import { NvD3Module }                      from 'ng2-nvd3';
-import { NgxDaterangepickerMd }            from 'ngx-daterangepicker-material';
+// import { AgmCoreModule }                   from '@agm/core';
+// import { FullCalendarModule }              from '@fullcalendar/angular';
+// import { LoadingBarRouterModule }          from '@ngx-loading-bar/router';
+// import { NgxChartsModule }                 from '@swimlane/ngx-charts';
+// import { TrendModule }                     from 'ngx-trend';
+// import { HighlightJsModule }               from 'ngx-highlight-js';
+// import { CountdownModule }                 from 'ngx-countdown';
+// import { ChartsModule }                    from 'ng4-charts/ng4-charts';
+// import { TagInputModule }                  from 'ngx-chips';
+// import { SweetAlert2Module }               from '@sweetalert2/ngx-sweetalert2';
+// import { Ng2TableModule }                  from 'ngx-datatable/ng2-table';
+// import { NvD3Module }                      from 'ng2-nvd3';
+// import { NgxDaterangepickerMd }            from 'ngx-daterangepicker-material';
 import 'd3';
 import 'nvd3';
-import { CalendarModule, DateAdapter }     from 'angular-calendar';
-import { adapterFactory }                  from 'angular-calendar/date-adapters/date-fns';
-import { PerfectScrollbarModule }          from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG }        from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
-};
+// import { CalendarModule, DateAdapter }     from 'angular-calendar';
+// import { adapterFactory }                  from 'angular-calendar/date-adapters/date-fns';
+// import { PerfectScrollbarModule }          from 'ngx-perfect-scrollbar';
+// import { PERFECT_SCROLLBAR_CONFIG }        from 'ngx-perfect-scrollbar';
+// import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+// const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+//   suppressScrollX: true
+// };
 
 // Pages
 import { DashboardV1Page }          from './pages/dashboard/v1/dashboard-v1';
@@ -57,36 +57,36 @@ import { EmailDetailPage }          from './pages/email/detail/email-detail';
 import { WidgetPage }               from './pages/widget/widget';
 
 // Page Options
-import { PageBlank }                from './pages/page-options/page-blank/page-blank';
-import { PageFooter }               from './pages/page-options/page-with-footer/page-with-footer';
-import { PageWithoutSidebar }       from './pages/page-options/page-without-sidebar/page-without-sidebar';
-import { PageSidebarRight }         from './pages/page-options/page-with-right-sidebar/page-with-right-sidebar';
-import { PageSidebarMinified }      from './pages/page-options/page-with-minified-sidebar/page-with-minified-sidebar';
-import { PageFullHeight }           from './pages/page-options/page-full-height/page-full-height';
-import { PageTwoSidebar }           from './pages/page-options/page-with-two-sidebar/page-with-two-sidebar';
-import { PageSidebarWide }          from './pages/page-options/page-with-wide-sidebar/page-with-wide-sidebar';
-import { PageSidebarLight }         from './pages/page-options/page-with-light-sidebar/page-with-light-sidebar';
-import { PageSidebarTransparent }   from './pages/page-options/page-with-transparent-sidebar/page-with-transparent-sidebar';
-import { PageTopMenu }              from './pages/page-options/page-with-top-menu/page-with-top-menu';
-import { PageMixedMenu }            from './pages/page-options/page-with-mixed-menu/page-with-mixed-menu';
-import { PageMegaMenu }             from './pages/page-options/page-with-mega-menu/page-with-mega-menu';
-import { PageBoxedLayout }          from './pages/page-options/page-with-boxed-layout/page-with-boxed-layout';
-import { BoxedLayoutMixedMenu }     from './pages/page-options/boxed-layout-with-mixed-menu/boxed-layout-with-mixed-menu';
-import { PageSidebarSearch }         from './pages/page-options/page-with-search-sidebar/page-with-search-sidebar';
+// import { PageBlank }                from './pages/page-options/page-blank/page-blank';
+// import { PageFooter }               from './pages/page-options/page-with-footer/page-with-footer';
+// import { PageWithoutSidebar }       from './pages/page-options/page-without-sidebar/page-without-sidebar';
+// import { PageSidebarRight }         from './pages/page-options/page-with-right-sidebar/page-with-right-sidebar';
+// import { PageSidebarMinified }      from './pages/page-options/page-with-minified-sidebar/page-with-minified-sidebar';
+// import { PageFullHeight }           from './pages/page-options/page-full-height/page-full-height';
+// import { PageTwoSidebar }           from './pages/page-options/page-with-two-sidebar/page-with-two-sidebar';
+// import { PageSidebarWide }          from './pages/page-options/page-with-wide-sidebar/page-with-wide-sidebar';
+// import { PageSidebarLight }         from './pages/page-options/page-with-light-sidebar/page-with-light-sidebar';
+// import { PageSidebarTransparent }   from './pages/page-options/page-with-transparent-sidebar/page-with-transparent-sidebar';
+// import { PageTopMenu }              from './pages/page-options/page-with-top-menu/page-with-top-menu';
+// import { PageMixedMenu }            from './pages/page-options/page-with-mixed-menu/page-with-mixed-menu';
+// import { PageMegaMenu }             from './pages/page-options/page-with-mega-menu/page-with-mega-menu';
+// import { PageBoxedLayout }          from './pages/page-options/page-with-boxed-layout/page-with-boxed-layout';
+// import { BoxedLayoutMixedMenu }     from './pages/page-options/boxed-layout-with-mixed-menu/boxed-layout-with-mixed-menu';
+// import { PageSidebarSearch }         from './pages/page-options/page-with-search-sidebar/page-with-search-sidebar';
 
 // UI Element
-import { UIGeneralPage }            from './pages/ui-elements/general/general';
-import { UITypographyPage }         from './pages/ui-elements/typography/typography';
-import { UITabsAccordionsPage }     from './pages/ui-elements/tabs-accordions/tabs-accordions';
-import { UIModalNotificationPage }  from './pages/ui-elements/modal-notification/modal-notification';
-import { UIWidgetBoxesPage }        from './pages/ui-elements/widget-boxes/widget-boxes';
-import { UIMediaObjectPage }        from './pages/ui-elements/media-object/media-object';
-import { UIButtonsPage }            from './pages/ui-elements/buttons/buttons';
-import { UIIconsPage }              from './pages/ui-elements/icons/icons';
-import { UISimpleLineIconsPage }    from './pages/ui-elements/simple-line-icons/simple-line-icons';
-import { UIIoniconsPage }           from './pages/ui-elements/ionicons/ionicons';
-import { UILanguageIconPage }       from './pages/ui-elements/language-icon/language-icon';
-import { UISocialButtonsPage }      from './pages/ui-elements/social-buttons/social-buttons';
+// import { UIGeneralPage }            from './pages/ui-elements/general/general';
+// import { UITypographyPage }         from './pages/ui-elements/typography/typography';
+// import { UITabsAccordionsPage }     from './pages/ui-elements/tabs-accordions/tabs-accordions';
+// import { UIModalNotificationPage }  from './pages/ui-elements/modal-notification/modal-notification';
+// import { UIWidgetBoxesPage }        from './pages/ui-elements/widget-boxes/widget-boxes';
+// import { UIMediaObjectPage }        from './pages/ui-elements/media-object/media-object';
+// import { UIButtonsPage }            from './pages/ui-elements/buttons/buttons';
+// import { UIIconsPage }              from './pages/ui-elements/icons/icons';
+// import { UISimpleLineIconsPage }    from './pages/ui-elements/simple-line-icons/simple-line-icons';
+// import { UIIoniconsPage }           from './pages/ui-elements/ionicons/ionicons';
+// import { UILanguageIconPage }       from './pages/ui-elements/language-icon/language-icon';
+// import { UISocialButtonsPage }      from './pages/ui-elements/social-buttons/social-buttons';
 
 // Bootstrap 4
 import { Bootstrap4Page }           from './pages/bootstrap-4/bootstrap-4';
@@ -130,18 +130,26 @@ import { TableDataPage }            from './pages/tables/table-data/table-data';
 
 // Form
 import { FormStuffPage }            from './pages/form-stuff/form-stuff';
+import { ApiService } from './core/services/api.service';
+import { AuthGuard } from './core/guards/auth.guard';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor, JwtModule } from '@auth0/angular-jwt';
+import { ErrorInterceptor } from './core/services/error.interceptor.service';
+import { CoreModule } from './core/core.module';
+import { LayoutModule } from './layout/layout.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    SidebarRightComponent,
-    TopMenuComponent,
-    FooterComponent,
-    PanelComponent,
-    FloatSubMenuComponent,
+    // HeaderComponent,
+    // SidebarComponent,
+    // SidebarRightComponent,
+    // TopMenuComponent,
+    // FooterComponent,
+    // PanelComponent,
+    // FloatSubMenuComponent,
 
     DashboardV1Page,
     DashboardV2Page,
@@ -150,34 +158,37 @@ import { FormStuffPage }            from './pages/form-stuff/form-stuff';
     EmailComposePage,
     EmailDetailPage,
     WidgetPage,
-    PageBlank,
-    PageFooter,
-    PageWithoutSidebar,
-    PageSidebarRight,
-    PageSidebarMinified,
-    PageFullHeight,
-    PageTwoSidebar,
-    PageSidebarWide,
-    PageSidebarLight,
-    PageSidebarTransparent,
-    PageSidebarSearch,
-    PageTopMenu,
-    PageMixedMenu,
-    PageBoxedLayout,
-    PageMegaMenu,
-    BoxedLayoutMixedMenu,
-    UIGeneralPage,
-    UITypographyPage,
-    UITabsAccordionsPage,
-    UIModalNotificationPage,
-    UIWidgetBoxesPage,
-    UIMediaObjectPage,
-    UIButtonsPage,
-    UIIconsPage,
-    UISimpleLineIconsPage,
-    UIIoniconsPage,
-    UILanguageIconPage,
-    UISocialButtonsPage,
+
+    // PageBlank,
+    // PageFooter,
+    // PageWithoutSidebar,
+    // PageSidebarRight,
+    // PageSidebarMinified,
+    // PageFullHeight,
+    // PageTwoSidebar,
+    // PageSidebarWide,
+    // PageSidebarLight,
+    // PageSidebarTransparent,
+    // PageSidebarSearch,
+    // PageTopMenu,
+    // PageMixedMenu,
+    // PageBoxedLayout,
+    // PageMegaMenu,
+    // BoxedLayoutMixedMenu,
+
+    // UIGeneralPage,
+    // UITypographyPage,
+    // UITabsAccordionsPage,
+    // UIModalNotificationPage,
+    // UIWidgetBoxesPage,
+    // UIMediaObjectPage,
+    // UIButtonsPage,
+    // UIIconsPage,
+    // UISimpleLineIconsPage,
+    // UIIoniconsPage,
+    // UILanguageIconPage,
+    // UISocialButtonsPage,
+
     Bootstrap4Page,
     CalendarPage,
     FormStuffPage,
@@ -200,48 +211,73 @@ import { FormStuffPage }            from './pages/form-stuff/form-stuff';
     ChartNgxPage,
     ChartD3Page,
     TableBasicPage,
-    TableDataPage
+    TableDataPage,
   ],
   imports: [
+    HttpClientModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyC5gJ5x8Yw7qP_DqvNq3IdZi2WUSiDjskk' }),
+    CoreModule,
+    LayoutModule,
+    SharedModule.forRoot(),
+    // AgmCoreModule.forRoot({
+    //   apiKey: "AIzaSyC5gJ5x8Yw7qP_DqvNq3IdZi2WUSiDjskk",
+    // }),
     BrowserAnimationsModule,
     BrowserModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory
-    }),
-    CountdownModule,
-    ChartsModule,
-    FullCalendarModule,
-    FormsModule,
-    HighlightJsModule,
-    LoadingBarRouterModule,
-    MatSortModule,
-    MatTableModule,
-    NgbModule,
-    NvD3Module,
-    NgxChartsModule,
-    Ng2TableModule,
-    NgxDaterangepickerMd.forRoot(),
-    PerfectScrollbarModule,
-    ReactiveFormsModule,
-    SweetAlert2Module.forRoot(),
-    TagInputModule,
-    TrendModule
-  ],
-  providers: [ Title, {
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-  }],
-  bootstrap: [ AppComponent ]
-})
 
+    // CalendarModule.forRoot({
+    //   provide: DateAdapter,
+    //   useFactory: adapterFactory,
+    // }),
+    // CountdownModule,
+    // ChartsModule,
+
+    // FullCalendarModule,
+    // FormsModule,
+    // HighlightJsModule,
+    // LoadingBarRouterModule,
+    // MatSortModule,
+    // MatTableModule,
+    // NgbModule,
+    // NvD3Module,
+    // NgxChartsModule,
+    // Ng2TableModule,
+    // NgxDaterangepickerMd.forRoot(),
+    // // PerfectScrollbarModule,
+    // ReactiveFormsModule,
+    // SweetAlert2Module.forRoot(),
+    // TagInputModule,
+    // TrendModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => "token",
+        // whitelistedDomains: ["example.com"],
+        // blacklistedRoutes: ["example.com/examplebadroute/"],
+      },
+    }),
+  ],
+  providers: [
+    ApiService,
+    AuthGuard,
+    Title,
+    // {
+    //   provide: PERFECT_SCROLLBAR_CONFIG,
+    //   useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    // },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
+})
 export class AppModule {
-  constructor(private router: Router, private titleService: Title, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private titleService: Title,
+    private route: ActivatedRoute
+  ) {
     router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-        var title = 'Color Admin | ' + this.route.snapshot.firstChild.data['title'];
+        const title = `Color Admin | ${this.route.snapshot.firstChild.data["title"]}`;
         this.titleService.setTitle(title);
       }
     });
