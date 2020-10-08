@@ -1,8 +1,7 @@
-import { Component, HostListener, Renderer2, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { Title } from "@angular/platform-browser";
-import { Router, NavigationEnd, NavigationStart, ActivatedRoute} from "@angular/router";
+import { Router, NavigationEnd, ActivatedRoute, NavigationStart} from "@angular/router";
 import pageSettings from "../config/page-settings";
-import * as global from "../config/globals";
 
 
 @Component({
@@ -11,19 +10,37 @@ import * as global from "../config/globals";
   styleUrls: ["./layout.component.scss"],
 })
 export class LayoutComponent implements OnInit {
+  constructor(
+    router: Router,
+    private titleService: Title,
+    private route: ActivatedRoute
+  ) {
+    router.events.subscribe((e) => {
+      if (e instanceof NavigationStart) {
+        if (window.innerWidth < 768) {
+          this.pageSettings.pageMobileSidebarToggled = false;
+        }
+      }
+      if (e instanceof NavigationEnd) {
+        const title = `Color Admin | ${this.route.snapshot.firstChild.data["title"]}`;
+        this.titleService.setTitle(title);
+      }
+    });
+  }
+
   pageSettings;
+
+  // window scroll
+  pageHasScroll;
 
   ngOnInit() {
     // page settings
     this.pageSettings = pageSettings;
   }
-
-  // window scroll
-  pageHasScroll;
   @HostListener("window:scroll", ["$event"])
-  onWindowScroll($event) {
-    var doc = document.documentElement;
-    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+  onWindowScroll() {
+    let doc = document.documentElement;
+    let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     if (top > 0) {
       this.pageHasScroll = true;
     } else {
@@ -32,7 +49,7 @@ export class LayoutComponent implements OnInit {
   }
 
   // set page minified
-  onToggleSidebarMinified(val: boolean): void {
+  onToggleSidebarMinified(): void {
     if (this.pageSettings.pageSidebarMinified) {
       this.pageSettings.pageSidebarMinified = false;
     } else {
@@ -41,7 +58,7 @@ export class LayoutComponent implements OnInit {
   }
 
   // set page right collapse
-  onToggleSidebarRight(val: boolean): void {
+  onToggleSidebarRight(): void {
     if (this.pageSettings.pageSidebarRightCollapsed) {
       this.pageSettings.pageSidebarRightCollapsed = false;
     } else {
@@ -50,7 +67,7 @@ export class LayoutComponent implements OnInit {
   }
 
   // hide mobile sidebar
-  onHideMobileSidebar(val: boolean): void {
+  onHideMobileSidebar(): void {
     if (this.pageSettings.pageMobileSidebarToggled) {
       if (this.pageSettings.pageMobileSidebarFirstClicked) {
         this.pageSettings.pageMobileSidebarFirstClicked = false;
@@ -61,7 +78,7 @@ export class LayoutComponent implements OnInit {
   }
 
   // toggle mobile sidebar
-  onToggleMobileSidebar(val: boolean): void {
+  onToggleMobileSidebar(): void {
     if (this.pageSettings.pageMobileSidebarToggled) {
       this.pageSettings.pageMobileSidebarToggled = false;
     } else {
@@ -71,7 +88,7 @@ export class LayoutComponent implements OnInit {
   }
 
   // hide right mobile sidebar
-  onHideMobileRightSidebar(val: boolean): void {
+  onHideMobileRightSidebar(): void {
     if (this.pageSettings.pageMobileRightSidebarToggled) {
       if (this.pageSettings.pageMobileRightSidebarFirstClicked) {
         this.pageSettings.pageMobileRightSidebarFirstClicked = false;
@@ -82,26 +99,12 @@ export class LayoutComponent implements OnInit {
   }
 
   // toggle right mobile sidebar
-  onToggleMobileRightSidebar(val: boolean): void {
+  onToggleMobileRightSidebar(): void {
     if (this.pageSettings.pageMobileRightSidebarToggled) {
       this.pageSettings.pageMobileRightSidebarToggled = false;
     } else {
       this.pageSettings.pageMobileRightSidebarToggled = true;
       this.pageSettings.pageMobileRightSidebarFirstClicked = true;
     }
-  }
-
-  constructor(
-    private titleService: Title,
-    private router: Router,
-    private renderer: Renderer2
-  ) {
-    router.events.subscribe((e) => {
-      if (e instanceof NavigationStart) {
-        if (window.innerWidth < 768) {
-          this.pageSettings.pageMobileSidebarToggled = false;
-        }
-      }
-    });
   }
 }

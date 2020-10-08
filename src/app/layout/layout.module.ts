@@ -28,12 +28,13 @@ import { PageWithoutSidebar } from "../pages/page-options/page-without-sidebar/p
 
 import { PERFECT_SCROLLBAR_CONFIG } from "ngx-perfect-scrollbar";
 import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
+import { PageOptionsModule } from '../pages/page-options/page-options.module';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
 };
 
 @NgModule({
-  imports: [SharedModule],
+  imports: [SharedModule, PageOptionsModule],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
@@ -50,22 +51,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FooterComponent,
     FloatSubMenuComponent,
 
-    PageBlank,
-    PageFooter,
-    PageWithoutSidebar,
-    PageSidebarRight,
-    PageSidebarMinified,
-    PageFullHeight,
-    PageTwoSidebar,
-    PageSidebarWide,
-    PageSidebarLight,
-    PageSidebarTransparent,
-    PageSidebarSearch,
-    PageTopMenu,
-    PageMixedMenu,
-    PageBoxedLayout,
-    PageMegaMenu,
-    BoxedLayoutMixedMenu,
   ],
   exports: [
     LayoutComponent,

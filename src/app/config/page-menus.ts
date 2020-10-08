@@ -6,15 +6,15 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "dashboard/v1",
+        url: "/dashboard/v1",
         title: "Dashboard v1",
       },
       {
-        url: "dashboard/v2",
+        url: "/dashboard/v2",
         title: "Dashboard v2",
       },
       {
-        url: "dashboard/v3",
+        url: "/dashboard/v3",
         title: "Dashboard v3",
       },
     ],
@@ -26,15 +26,15 @@ var pageMenus = [
     badge: "10",
     submenu: [
       {
-        url: "email/inbox",
+        url: "/email/inbox",
         title: "Inbox",
       },
       {
-        url: "email/compose",
+        url: "/email/compose",
         title: "Compose",
       },
       {
-        url: "email/detail",
+        url: "/email/detail",
         title: "Detail",
       },
     ],
@@ -43,7 +43,7 @@ var pageMenus = [
     icon: "fab fa-simplybuilt",
     title: "Widgets",
     label: "NEW",
-    url: "widget",
+    url: "/widget",
   },
   {
     icon: "fa fa-gem",
@@ -53,54 +53,54 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "ui/general",
+        url: "/ui/general",
         title: "General",
         highlight: "true",
       },
       {
-        url: "ui/typography",
+        url: "/ui/typography",
         title: "Typography",
       },
       {
-        url: "ui/tabs-accordions",
+        url: "/ui/tabs-accordions",
         title: "Tabs & Accordions",
       },
       {
-        url: "ui/modal-notification",
+        url: "/ui/modal-notification",
         title: "Modal & Notification",
         highlight: "true",
       },
       {
-        url: "ui/widget-boxes",
+        url: "/ui/widget-boxes",
         title: "Widget Boxes",
       },
       {
-        url: "ui/media-object",
+        url: "/ui/media-object",
         title: "Media Object",
       },
       {
-        url: "ui/buttons",
+        url: "/ui/buttons",
         title: "Buttons",
         highlight: "true",
       },
       {
-        url: "ui/icons",
+        url: "/ui/icons",
         title: "Icons",
       },
       {
-        url: "ui/simple-line-icons",
+        url: "/ui/simple-line-icons",
         title: "Simple Line Ioncs",
       },
       {
-        url: "ui/ionicons",
+        url: "/ui/ionicons",
         title: "Ionicons",
       },
       {
-        url: "ui/language-icon",
+        url: "/ui/language-icon",
         title: "Language Icon",
       },
       {
-        url: "ui/social-buttons",
+        url: "/ui/social-buttons",
         title: "Social Buttons",
       },
     ],
@@ -108,13 +108,13 @@ var pageMenus = [
   {
     img: "/assets/img/logo/logo-bs4.png",
     title: "Bootstrap 4",
-    url: "bootstrap-4",
+    url: "/bootstrap-4",
     label: "NEW",
   },
   {
     icon: "fa fa-list-ol",
     title: "Form Stuff",
-    url: "form-stuff",
+    url: "/form-stuff",
     label: "NEW",
   },
   {
@@ -124,11 +124,11 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "table/basic",
+        url: "/tables/basic",
         title: "Basic Table",
       },
       {
-        url: "table/data",
+        url: "/tables/data",
         title: "Ngx DataTable",
       },
     ],
@@ -159,16 +159,16 @@ var pageMenus = [
   },
   {
     icon: "fa fa-chart-pie",
-    title: "Chart",
+    title: "Charts",
     url: "",
     caret: "true",
     submenu: [
       {
-        url: "chart/ngx",
+        url: "/charts/ngx",
         title: "Ngx Chart",
       },
       {
-        url: "chart/d3",
+        url: "/charts/d3",
         title: "d3 Chart",
       },
     ],
@@ -176,7 +176,7 @@ var pageMenus = [
   {
     icon: "fa fa-calendar",
     title: "Calendar",
-    url: "calendar",
+    url: "/calendar",
   },
   {
     icon: "fa fa-map",
@@ -190,11 +190,11 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "gallery/v1",
+        url: "/gallery/v1",
         title: "Gallery v1",
       },
       {
-        url: "gallery/v2",
+        url: "/gallery/v2",
         title: "Gallery v2",
       },
     ],
@@ -207,67 +207,67 @@ var pageMenus = [
     label: "NEW",
     submenu: [
       {
-        url: "page-option/page-blank",
+        url: "/page-option/page-blank",
         title: "Blank Page",
       },
       {
-        url: "page-option/page-with-footer",
+        url: "/page-option/page-with-footer",
         title: "Page with Footer",
       },
       {
-        url: "page-option/page-without-sidebar",
+        url: "/page-option/page-without-sidebar",
         title: "Page without Sidebar",
       },
       {
-        url: "page-option/page-with-right-sidebar",
+        url: "/page-option/page-with-right-sidebar",
         title: "Page with Right Sidebar",
       },
       {
-        url: "page-option/page-with-minified-sidebar",
+        url: "/page-option/page-with-minified-sidebar",
         title: "Page with Minified Sidebar",
       },
       {
-        url: "page-option/page-with-two-sidebar",
+        url: "/page-option/page-with-two-sidebar",
         title: "Page with Two Sidebar",
       },
       {
-        url: "page-option/page-full-height",
+        url: "/page-option/page-full-height",
         title: "Full Height Content",
       },
       {
-        url: "page-option/page-with-wide-sidebar",
+        url: "/page-option/page-with-wide-sidebar",
         title: "Page with Wide Sidebar",
       },
       {
-        url: "page-option/page-with-light-sidebar",
+        url: "/page-option/page-with-light-sidebar",
         title: "Page with Light Sidebar",
       },
       {
-        url: "page-option/page-with-mega-menu",
+        url: "/page-option/page-with-mega-menu",
         title: "Page with Mega Menu",
       },
       {
-        url: "page-option/page-with-top-menu",
+        url: "/page-option/page-with-top-menu",
         title: "Page with Top Menu",
       },
       {
-        url: "page-option/page-with-boxed-layout",
+        url: "/page-option/page-with-boxed-layout",
         title: "Page with Boxed Layout",
       },
       {
-        url: "page-option/page-with-mixed-menu",
+        url: "/page-option/page-with-mixed-menu",
         title: "Page with Mixed Menu",
       },
       {
-        url: "page-option/boxed-layout-with-mixed-menu",
+        url: "/page-option/boxed-layout-with-mixed-menu",
         title: "Boxed Layout with Mixed Menu",
       },
       {
-        url: "page-option/page-with-transparent-sidebar",
+        url: "/page-option/page-with-transparent-sidebar",
         title: "Page with Transparent Sidebar",
       },
       {
-        url: "page-option/page-with-search-sidebar",
+        url: "/page-option/page-with-search-sidebar",
         title: "Page with Search Sidebar",
         highlight: "true",
       },
@@ -281,36 +281,36 @@ var pageMenus = [
     label: "NEW",
     submenu: [
       {
-        url: "extra/timeline",
+        url: "/extra/timeline",
         title: "Timeline",
       },
       {
-        url: "extra/coming-soon",
+        url: "/extra/coming-soon",
         title: "Coming Soon Page",
       },
       {
-        url: "extra/search-results",
+        url: "/extra/search-results",
         title: "Search Results",
       },
       {
-        url: "extra/invoice",
+        url: "/extra/invoice",
         title: "Invoice",
       },
       {
-        url: "extra/error-page",
+        url: "/extra/error-page",
         title: "404 Error Page",
       },
       {
-        url: "extra/profile",
+        url: "/extra/profile",
         title: "Profile Page",
       },
       {
-        url: "extra/scrum-board",
+        url: "/extra/scrum-board",
         title: "Scrum Board",
         highlight: "true",
       },
       {
-        url: "extra/cookie-acceptance-banner",
+        url: "/extra/cookie-acceptance-banner",
         title: "Cookie Acceptance Banner",
         highlight: "true",
       },
@@ -323,19 +323,19 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "login/v1",
+        url: "/login/v1",
         title: "Login",
       },
       {
-        url: "login/v2",
+        url: "/login/v2",
         title: "Login v2",
       },
       {
-        url: "login/v3",
+        url: "/login/v3",
         title: "Login v3",
       },
       {
-        url: "register/v3",
+        url: "/login/register-v3",
         title: "Register v3",
       },
     ],
@@ -399,7 +399,7 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "helper/css",
+        url: "/helper/css",
         title: "Predefined CSS Classes",
       },
     ],

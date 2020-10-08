@@ -40,45 +40,14 @@ import "nvd3";
 
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
 import { TrendModule } from "ngx-trend";
+import { WidgetPage } from "../pages/widget/widget";
+import { Bootstrap4Page } from "../pages/bootstrap-4/bootstrap-4";
+import { CalendarPage } from "../pages/calendar/calendar";
+import { FormStuffPage } from "../pages/form-stuff/form-stuff";
+import { MapPage } from "../pages/map/map";
 
 // import { TranslateModule } from "@ngx-translate/core";
 // import { ToasterModule } from "angular2-toaster/angular2-toaster";
-
-// import { AccordionModule } from "ngx-bootstrap/accordion";
-// import { AlertModule } from "ngx-bootstrap/alert";
-// import { ButtonsModule } from "ngx-bootstrap/buttons";
-// import { CarouselModule } from "ngx-bootstrap/carousel";
-// import { CollapseModule } from "ngx-bootstrap/collapse";
-// import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-// import { ModalModule } from "ngx-bootstrap/modal";
-// import { PaginationModule } from "ngx-bootstrap/pagination";
-// import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-// import { RatingModule } from "ngx-bootstrap/rating";
-// import { TabsModule } from "ngx-bootstrap/tabs";
-// import { TimepickerModule } from "ngx-bootstrap/timepicker";
-// import { TooltipModule } from "ngx-bootstrap/tooltip";
-// import { PopoverModule } from "ngx-bootstrap/popover";
-// import { TypeaheadModule } from "ngx-bootstrap/typeahead";
-// import { DatepickerModule } from "ngx-bootstrap/datepicker";
-// import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
-
-// import { FlotDirective } from "./directives/flot/flot.directive";
-// import { SparklineDirective } from "./directives/sparkline/sparkline.directive";
-// import { EasypiechartDirective } from "./directives/easypiechart/easypiechart.directive";
-// import { ColorsService } from "./colors/colors.service";
-// import { CheckallDirective } from "./directives/checkall/checkall.directive";
-// import { VectormapDirective } from "./directives/vectormap/vectormap.directive";
-// import { NowDirective } from "./directives/now/now.directive";
-// import { ScrollableDirective } from "./directives/scrollable/scrollable.directive";
-// import { JqcloudDirective } from "./directives/jqcloud/jqcloud.directive";
-
-
-// import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
-// import { PERFECT_SCROLLBAR_CONFIG } from "ngx-perfect-scrollbar";
-// import { PerfectScrollbarConfigInterface } from "ngx-perfect-scrollbar";
-// const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-//   suppressScrollX: true,
-// };
 
 // https://angular.io/styleguide#!#04-10
 @NgModule({
@@ -86,28 +55,8 @@ import { TrendModule } from "ngx-trend";
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    // PerfectScrollbarModule,
-    // TranslateModule,
-    // AccordionModule.forRoot(),
-    // AlertModule.forRoot(),
-    // ButtonsModule.forRoot(),
-    // CarouselModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // DatepickerModule.forRoot(),
-    // BsDatepickerModule.forRoot(),
-    // BsDropdownModule.forRoot(),
-    // ModalModule.forRoot(),
-    // PaginationModule.forRoot(),
-    // ProgressbarModule.forRoot(),
-    // RatingModule.forRoot(),
-    // TabsModule.forRoot(),
-    // TimepickerModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // PopoverModule.forRoot(),
-    // TypeaheadModule.forRoot(),
-    // ToasterModule,
 
-PerfectScrollbarModule,
+    PerfectScrollbarModule,
     TrendModule,
 
     AgmCoreModule.forRoot({
@@ -141,6 +90,12 @@ PerfectScrollbarModule,
   declarations: [
     PanelComponent,
 
+    WidgetPage,
+    Bootstrap4Page,
+    CalendarPage,
+    FormStuffPage,
+    MapPage,
+
     UIGeneralPage,
     UITypographyPage,
     UITabsAccordionsPage,
@@ -153,14 +108,6 @@ PerfectScrollbarModule,
     UIIoniconsPage,
     UILanguageIconPage,
     UISocialButtonsPage,
-    // FlotDirective,
-    // SparklineDirective,
-    // EasypiechartDirective,
-    // CheckallDirective,
-    // VectormapDirective,
-    // NowDirective,
-    // ScrollableDirective,
-    // JqcloudDirective,
   ],
   exports: [
     CommonModule,
@@ -168,34 +115,14 @@ PerfectScrollbarModule,
     ReactiveFormsModule,
     // TranslateModule,
     RouterModule,
-    // AccordionModule,
-    // AlertModule,
-    // ButtonsModule,
-    // CarouselModule,
-    // CollapseModule,
-    // DatepickerModule,
-    // BsDatepickerModule,
-    // BsDropdownModule,
-    // ModalModule,
-    // PaginationModule,
-    // ProgressbarModule,
-    // RatingModule,
-    // TabsModule,
-    // TimepickerModule,
-    // TooltipModule,
-    // PopoverModule,
-    // TypeaheadModule,
-    // ToasterModule,
-    // FlotDirective,
-    // SparklineDirective,
-    // EasypiechartDirective,
-    // CheckallDirective,
-    // VectormapDirective,
-    // NowDirective,
-    // ScrollableDirective,
-    // JqcloudDirective,
 
-PerfectScrollbarModule,
+    WidgetPage,
+    Bootstrap4Page,
+    CalendarPage,
+    FormStuffPage,
+    MapPage,
+
+    PerfectScrollbarModule,
     TrendModule,
 
     CalendarModule,
