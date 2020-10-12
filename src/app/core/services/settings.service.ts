@@ -20,7 +20,7 @@ export class SettingsService {
     // App Settings
     // -----------------------------------
     this.app = {
-      name: "Spectre",
+      name: "PlentyRx",
       description: "Angular Bootstrap Admin Template",
       year: ((new Date()).getFullYear()),
       env: "dev"

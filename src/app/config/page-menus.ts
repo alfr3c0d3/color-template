@@ -1,4 +1,6 @@
-var pageMenus = [
+"use strict";
+
+const pageMenus = [
   {
     icon: "fa fa-th-large",
     title: "Dashboard",
@@ -323,19 +325,19 @@ var pageMenus = [
     caret: "true",
     submenu: [
       {
-        url: "/login/v1",
+        url: "/login-t/v1",
         title: "Login",
       },
       {
-        url: "/login/v2",
+        url: "/login-t/v2",
         title: "Login v2",
       },
       {
-        url: "/login/v3",
+        url: "/login-t/v3",
         title: "Login v3",
       },
       {
-        url: "/login/register-v3",
+        url: "/login-t/register-v3",
         title: "Register v3",
       },
     ],

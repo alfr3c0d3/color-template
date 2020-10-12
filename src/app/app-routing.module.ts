@@ -20,6 +20,8 @@ import { AuthModule } from "./pages/auth/auth.module";
 import { LoginComponent } from "./pages/auth/login/login.component";
 import { LayoutComponent } from "./layout/layout.component";
 import { SharedModule } from "./shared/shared.module";
+import { AuthGuard } from "./core/guards/auth.guard";
+import { RegisterComponent } from "./pages/auth/register/register.component";
 
 const routes: Routes = [
   {
@@ -27,7 +29,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: "", redirectTo: "dashboard/v1", pathMatch: "full" },
-      { path: "dashboard", loadChildren: "./pages/dashboard/dashboard.module#DashboardModule", data: { title: "Dashboard"} },
+      { path: "dashboard", loadChildren: "./pages/dashboard/dashboard.module#DashboardModule", /*canActivate: [AuthGuard],*/ data: { title: "Dashboard"} },
       { path: "email", loadChildren: "./pages/email/email.module#EmailModule", data: { title: "Email"} },
       { path: "widget", component: WidgetPage, data: { title: "Widgets" } },
       { path: "ui", loadChildren: "./pages/ui-elements/ui.module#UiModule", data: { title: "Ui Elements" } },
@@ -40,13 +42,14 @@ const routes: Routes = [
       { path: "gallery", loadChildren: "./pages/gallery/gallery.module#GalleryModule", data: { title: "Gallery" } },
       { path: "page-option", loadChildren: "./pages/page-options/page-options.module#PageOptionsModule", data: { title: "Page Options" } },
       { path: "extra", loadChildren: "./pages/extra/extra.module#ExtraModule", data: { title: "Extra" } },
-      { path: "login", loadChildren: "./pages/login/login.module#LoginModule", data: { title: "Login" } },
+      { path: "login-t", loadChildren: "./pages/login/login.module#LoginModule", data: { title: "Login" } },
       { path: "helper", loadChildren: "./pages/helper/helper.module#HelperModule", data: { title: "Helper" } },
     ],
   },
 
   // Not lazy-loaded routes
-  { path: "my-login", component: LoginComponent },
+  { path: "login", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
 ];
 
 @NgModule({

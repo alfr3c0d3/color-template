@@ -25,11 +25,11 @@ export class RegisterComponent implements OnInit {
     private userService: AuthService) {
 
     const password = new FormControl("", Validators.compose([Validators.required, Validators.pattern("^[a-zA-Z0-9]{6,10}$")]));
-    const certainPassword = new FormControl("", CustomValidators.equalTo(password));
+    const confirmPassword = new FormControl("", CustomValidators.equalTo(password));
 
     this.passwordForm = fb.group({
-      "password": password,
-      "confirmPassword": certainPassword
+      password: password,
+      confirmPassword: confirmPassword
     });
 
     this.valForm = fb.group({

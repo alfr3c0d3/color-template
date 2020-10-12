@@ -1,64 +1,53 @@
-<div class="wrapper">
-  <div class="block-center mt-4 wd-xl">
-    <!-- START card-->
-    <div class="card card-flat">
-      <div class="card-header text-center bg-dark">
-        <a href="#">
-          <img class="block-center rounded" src="assets/img/logo.png" alt="Image" />
-        </a>
-      </div>
-      <div class="card-body">
-        <p class="text-center py-2">SIGN IN TO CONTINUE.</p>
-        <form [formGroup]="valForm" class="form-validate mb-3" role="form" name="loginForm" novalidate="" (submit)="submitForm($event, valForm.value)">
-          <div class="form-group">
-            <div class="input-group with-focus">
-              <input class="form-control border-right-0" id="exampleInputEmail1" type="email" name="email" placeholder="Enter email" autocomplete="off" formControlName="email" required="" />
-              <div class="input-group-append">
-                <span class="input-group-text text-muted bg-transparent border-left-0">
-                  <em class="fa fa-envelope"></em>
-                </span>
-              </div>
-            </div>
-            <div class="text-danger" *ngIf="valForm.controls['email'].hasError('required') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field is required</div>
-            <div class="text-danger" *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field must be a valid email address</div>
-          </div>
-          <div class="form-group">
-            <div class="input-group with-focus">
-              <input class="form-control border-right-0" id="exampleInputPassword1" type="password" name="password" placeholder="Password" formControlName="password" required="" />
-              <div class="input-group-append">
-                <span class="input-group-text text-muted bg-transparent border-left-0">
-                  <em class="fa fa-lock"></em>
-                </span>
-              </div>
-            </div>
-            <div class="text-danger" *ngIf="valForm.controls['password'].hasError('required') && (valForm.controls['password'].dirty || valForm.controls['password'].touched)">This field is required</div>
-          </div>
-          <div class="clearfix">
-            <div class="checkbox c-checkbox float-left mt0">
-              <label>
-                <input type="checkbox" value="" name="account_remember" />
-                <span class="fa fa-check"></span>Remember Me
-              </label>
-            </div>
-            <div class="float-right">
-              <a class="text-muted" [routerLink]="'/recover'">Forgot your password?</a>
-            </div>
-          </div>
-          <button class="btn btn-block btn-primary mt-3" type="submit">Login</button>
-        </form>
-        <!-- <div class="alert alert-danger text-center" ></div> -->
-        <p class="pt-3 text-center">Need to Signup?</p>
-        <a class="btn btn-block btn-secondary" [routerLink]="'/register'">Register Now</a>
-      </div>
+<div class="login-cover">
+  <div class="login-cover-image" [ngStyle]="{ 'background-image': 'url(' + this.bg + ')' }"></div>
+  <div class="login-cover-bg"></div>
+</div>
+
+<!-- begin login -->
+<div class="login login-v2" data-pageload-addclass="animated fadeIn">
+  <!-- begin brand -->
+  <div class="login-header">
+    <div class="brand">
+      <span class="logo"></span> <b>PlentyRx</b>
+      <small>responsive bootstrap 4 admin template</small>
     </div>
-    <!-- END card-->
-    <div class="p-3 text-center">
-      <span>&copy;</span>
-      <span>{{ settings.getAppSetting('year') }}</span>
-      <span class="mx-2">-</span>
-      <span>{{ settings.getAppSetting('name') }}</span>
-      <br />
-      <span>{{ settings.getAppSetting('description') }}</span>
+    <div class="icon">
+      <i class="fa fa-lock"></i>
     </div>
   </div>
+  <!-- end brand -->
+  <!-- begin login-content -->
+  <div class="login-content">
+    <form [formGroup]="valForm" class="margin-bottom-0" role="form" name="loginForm" novalidate="" (submit)="submitForm($event, valForm.value)">
+      <div class="form-group m-b-20">
+        <input type="email" name="email" class="form-control form-control-lg" autocomplete="off" placeholder="Email Address" formControlName="email" required />
+        <div class="text-danger" *ngIf="valForm.controls['email'].hasError('required') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field is required</div>
+        <div class="text-danger" *ngIf="valForm.controls['email'].hasError('email') && (valForm.controls['email'].dirty || valForm.controls['email'].touched)">This field must be a valid email address</div>
+      </div>
+      <div class="form-group m-b-20">
+        <input type="password" name="password" class="form-control form-control-lg" autocomplete="off" placeholder="Password" formControlName="password" required />
+        <div class="text-danger" *ngIf="valForm.controls['password'].hasError('required') && (valForm.controls['password'].dirty || valForm.controls['password'].touched)">This field is required</div>
+      </div>
+      <div class="checkbox checkbox-css m-b-20">
+        <input type="checkbox" id="remember_checkbox" />
+        <label for="remember_checkbox">
+          Remember Me
+        </label>
+      </div>
+      <div class="login-buttons">
+        <button type="submit" class="btn btn-success btn-block btn-lg">Sign me in</button>
+      </div>
+      <div class="m-t-20">
+        Not a member yet? Click <a routerLink="/register" class="text-success">here</a> to register.
+      </div>
+    </form>
+  </div>
+  <!-- end login-content -->
 </div>
+<!-- end login -->
+
+<ul class="login-bg-list clearfix">
+  <li *ngFor="let list of bgList" [ngClass]="{ 'active': list.active }">
+    <a href="javascript:;" (click)="changeBg(list)" [ngStyle]="{ 'background-image': 'url(' + list.bg + ')' }"></a>
+  </li>
+</ul>
