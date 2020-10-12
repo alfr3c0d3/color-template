@@ -19,10 +19,10 @@
       <div class="login-content">
         <form #f="ngForm" (ngSubmit)="formSubmit(f)" class="margin-bottom-0">
           <div class="form-group m-b-20">
-            <input type="text" class="form-control form-control-lg inverse-mode" placeholder="Email Address" required />
+            <input type="text" class="form-control form-control-lg inverse-mode" autocomplete="username" placeholder="Email Address" required />
           </div>
           <div class="form-group m-b-20">
-            <input type="password" class="form-control form-control-lg inverse-mode" placeholder="Password" required />
+            <input type="password" class="form-control form-control-lg inverse-mode" autocomplete="current-password" placeholder="Password" required />
           </div>
           <div class="checkbox checkbox-css m-b-20">
             <input type="checkbox" id="remember_checkbox" />

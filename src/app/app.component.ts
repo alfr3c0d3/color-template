@@ -19,6 +19,6 @@ export class AppComponent implements OnInit {
       if (target.tagName === "A" && ["", "#"].indexOf(target.getAttribute("href")) > -1) {
         e.preventDefault();
       }
-    });
+    }, {passive: true});
   }
 }

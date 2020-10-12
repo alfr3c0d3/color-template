@@ -33,12 +33,20 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    SharedModule,
-    RouterModule.forChild(routes)
-  ],
+  imports: [SharedModule, RouterModule.forChild(routes)],
   declarations: [
-
+    UIGeneralPage,
+    UITypographyPage,
+    UITabsAccordionsPage,
+    UIModalNotificationPage,
+    UIWidgetBoxesPage,
+    UIMediaObjectPage,
+    UIButtonsPage,
+    UIIconsPage,
+    UISimpleLineIconsPage,
+    UIIoniconsPage,
+    UILanguageIconPage,
+    UISocialButtonsPage,
   ],
   exports: [RouterModule],
 })
