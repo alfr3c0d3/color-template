@@ -56,41 +56,41 @@
       </ng-template>
 
       <!-- sidebar menu -->
-      <li *ngFor="let menu of menus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu.expand, 'has-sub': menu.submenu, 'd-none': menu.hide }" #rla="routerLinkActive">
-        <a *ngIf="menu.submenu" (click)="expandCollapseSubmenu(menu, menus, rla)" (mouseenter)="showPageFloatSubMenu(menu.submenu, $event)" (mouseleave)="hidePageFloatSubMenu()">
+      <li *ngFor="let menu of menus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu.state === 'expand', 'has-sub': menu.subMenu, 'd-none': menu.hide }" #rla="routerLinkActive">
+        <a *ngIf="menu.subMenu" (click)="expandCollapseSubmenu(menu, menus, rla)" (mouseenter)="showPageFloatSubMenu(menu.subMenu, $event)" (mouseleave)="hidePageFloatSubMenu()">
           <ng-container *ngTemplateOutlet="sidebarMenuNav; context: {menu: menu}"></ng-container>
         </a>
-        <a *ngIf="!menu.submenu" [routerLink]="menu.url">
+        <a *ngIf="!menu.subMenu" [routerLink]="menu.url">
           <ng-container *ngTemplateOutlet="sidebarMenuNav; context: {menu: menu}"></ng-container>
         </a>
 
-        <!-- submenu lvl 1 -->
-        <ul class="sub-menu" *ngIf="menu.submenu" [style.display]="(menu.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu.state == 'collapse') ? 'none' : ''">
-          <li *ngFor="let menu1 of menu.submenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu1.state == 'expand', 'closed': menu1.state == 'collapsed', 'has-sub': menu1.submenu, 'd-none': menu1.hide }" #rla1="routerLinkActive">
-            <a *ngIf="menu1.submenu" (click)="(menu1.submenu) ? expandCollapseSubmenu(menu1, menu.submenu, rla1) : ''">
+        <!-- subMenu lvl 1 -->
+        <ul class="sub-menu" *ngIf="menu.subMenu" [style.display]="(menu.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu.state == 'collapse') ? 'none' : ''">
+          <li *ngFor="let menu1 of menu.subMenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu1.state == 'expand', 'closed': menu1.state == 'collapse', 'has-sub': menu1.subMenu, 'd-none': menu1.hide }" #rla1="routerLinkActive">
+            <a *ngIf="menu1.subMenu" (click)="(menu1.subMenu) ? expandCollapseSubmenu(menu1, menu.subMenu, rla1) : ''">
               <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu1}"></ng-template>
             </a>
-            <a *ngIf="!menu1.submenu" [routerLink]="menu1.url">
+            <a *ngIf="!menu1.subMenu" [routerLink]="menu1.url">
               <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu1}"></ng-template>
             </a>
 
-            <!-- submenu lvl 2 -->
-            <ul class="sub-menu" *ngIf="menu1.submenu" [style.display]="(menu1.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu1.state == 'collapse') ? 'none' : ''">
-              <li *ngFor="let menu2 of menu1.submenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu2.state == 'expand', 'closed': menu2.state == 'collapsed', 'has-sub': menu2.submenu, 'd-none': menu2.hide }" #rla2="routerLinkActive">
-                <a *ngIf="menu2.submenu" (click)="(menu2.submenu) ? expandCollapseSubmenu(menu2, menu1.submenu, rla2) : ''">
+            <!-- subMenu lvl 2 -->
+            <ul class="sub-menu" *ngIf="menu1.subMenu" [style.display]="(menu1.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu1.state == 'collapse') ? 'none' : ''">
+              <li *ngFor="let menu2 of menu1.subMenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu2.state == 'expand', 'closed': menu2.state == 'collapse', 'has-sub': menu2.subMenu, 'd-none': menu2.hide }" #rla2="routerLinkActive">
+                <a *ngIf="menu2.subMenu" (click)="(menu2.subMenu) ? expandCollapseSubmenu(menu2, menu1.subMenu, rla2) : ''">
                   <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu2}"></ng-template>
                 </a>
-                <a *ngIf="!menu2.submenu" [routerLink]="menu2.url">
+                <a *ngIf="!menu2.subMenu" [routerLink]="menu2.url">
                   <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu2}"></ng-template>
                 </a>
 
-                <!-- submenu lvl 3 -->
-                <ul class="sub-menu" *ngIf="menu2.submenu" [style.display]="(menu2.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu2.state == 'collapse') ? 'none' : ''">
-                  <li *ngFor="let menu3 of menu2.submenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu3.state == 'expand', 'closed': menu3.state == 'collapsed', 'has-sub': menu3.submenu, 'd-none': menu3.hide }" #rla3="routerLinkActive">
-                    <a *ngIf="menu3.submenu" (click)="(menu3.submenu) ? expandCollapseSubmenu(menu3, menu2.submenu, rla3) : ''">
+                <!-- subMenu lvl 3 -->
+                <ul class="sub-menu" *ngIf="menu2.subMenu" [style.display]="(menu2.state == 'expand' && !pageSettings.pageSidebarMinified) ? 'block' : (menu2.state == 'collapse') ? 'none' : ''">
+                  <li *ngFor="let menu3 of menu2.subMenu" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': menu3.state == 'expand', 'closed': menu3.state == 'collapse', 'has-sub': menu3.subMenu, 'd-none': menu3.hide }" #rla3="routerLinkActive">
+                    <a *ngIf="menu3.subMenu" (click)="(menu3.subMenu) ? expandCollapseSubmenu(menu3, menu2.subMenu, rla3) : ''">
                       <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu3}"></ng-template>
                     </a>
-                    <a *ngIf="!menu3.submenu" [routerLink]="menu3.url">
+                    <a *ngIf="!menu3.subMenu" [routerLink]="menu3.url">
                       <ng-template *ngTemplateOutlet="sidebarSubMenuNav; context: {menu: menu3}"></ng-template>
                     </a>
                   </li>

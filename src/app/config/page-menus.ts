@@ -1,12 +1,25 @@
 "use strict";
+interface IPageMenus {
+  title: string;
+  url: string;
+  icon?: string;
+  img?: string;
+  caret?: string;
+  label?: string;
+  state?: string;
+  badge?: string;
+  highlight?: boolean;
+  hide?: boolean;
+  subMenu?: IPageMenus[];
+}
 
-const pageMenus = [
+const pageMenus: IPageMenus[] = [
   {
     icon: "fa fa-th-large",
     title: "Dashboard",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/dashboard/v1",
         title: "Dashboard v1",
@@ -26,7 +39,7 @@ const pageMenus = [
     title: "Email",
     url: "",
     badge: "10",
-    submenu: [
+    subMenu: [
       {
         url: "/email/inbox",
         title: "Inbox",
@@ -53,11 +66,11 @@ const pageMenus = [
     url: "",
     label: "NEW",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/ui/general",
         title: "General",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "/ui/typography",
@@ -70,7 +83,7 @@ const pageMenus = [
       {
         url: "/ui/modal-notification",
         title: "Modal & Notification",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "/ui/widget-boxes",
@@ -83,7 +96,7 @@ const pageMenus = [
       {
         url: "/ui/buttons",
         title: "Buttons",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "/ui/icons",
@@ -124,7 +137,7 @@ const pageMenus = [
     title: "Tables",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/tables/basic",
         title: "Basic Table",
@@ -140,7 +153,7 @@ const pageMenus = [
     title: "Frontend",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "",
         title: "One Page Parallax",
@@ -164,7 +177,7 @@ const pageMenus = [
     title: "Charts",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/charts/ngx",
         title: "Ngx Chart",
@@ -190,7 +203,7 @@ const pageMenus = [
     title: "Gallery",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/gallery/v1",
         title: "Gallery v1",
@@ -207,7 +220,7 @@ const pageMenus = [
     url: "",
     caret: "true",
     label: "NEW",
-    submenu: [
+    subMenu: [
       {
         url: "/page-option/page-blank",
         title: "Blank Page",
@@ -271,7 +284,7 @@ const pageMenus = [
       {
         url: "/page-option/page-with-search-sidebar",
         title: "Page with Search Sidebar",
-        highlight: "true",
+        highlight: true,
       },
     ],
   },
@@ -281,7 +294,7 @@ const pageMenus = [
     url: "",
     caret: "true",
     label: "NEW",
-    submenu: [
+    subMenu: [
       {
         url: "/extra/timeline",
         title: "Timeline",
@@ -309,12 +322,12 @@ const pageMenus = [
       {
         url: "/extra/scrum-board",
         title: "Scrum Board",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "/extra/cookie-acceptance-banner",
         title: "Cookie Acceptance Banner",
-        highlight: "true",
+        highlight: true,
       },
     ],
   },
@@ -323,7 +336,7 @@ const pageMenus = [
     title: "Login & Register",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/login-t/v1",
         title: "Login",
@@ -348,7 +361,7 @@ const pageMenus = [
     url: "",
     label: "NEW",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "",
         title: "HTML",
@@ -380,17 +393,17 @@ const pageMenus = [
       {
         url: "",
         title: "TRANSPARENT DESIGN",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "",
         title: "FACEBOOK DESIGN",
-        highlight: "true",
+        highlight: true,
       },
       {
         url: "",
         title: "GOOGLE DESIGN",
-        highlight: "true",
+        highlight: true,
       },
     ],
   },
@@ -399,7 +412,7 @@ const pageMenus = [
     title: "Helper",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "/helper/css",
         title: "Predefined CSS Classes",
@@ -411,17 +424,17 @@ const pageMenus = [
     title: "Menu Level",
     url: "",
     caret: "true",
-    submenu: [
+    subMenu: [
       {
         url: "",
         title: "Menu 1.1",
         caret: "true",
-        submenu: [
+        subMenu: [
           {
             url: "",
             title: "Menu 2.1",
             caret: "true",
-            submenu: [
+            subMenu: [
               {
                 url: "",
                 title: "Menu 3.1",

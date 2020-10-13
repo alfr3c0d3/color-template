@@ -3,19 +3,19 @@ import { RouterModule, Routes } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
 // Widgets
-import { WidgetPage }               from "./pages/widget/widget";
+import { WidgetPage } from "./pages/widget/widget";
 
 // Bootstrap 4
-import { Bootstrap4Page }           from "./pages/bootstrap-4/bootstrap-4";
+import { Bootstrap4Page } from "./pages/bootstrap-4/bootstrap-4";
 
 // Calendar
-import { CalendarPage }             from "./pages/calendar/calendar";
+import { CalendarPage } from "./pages/calendar/calendar";
 
 // Map
-import { MapPage }            			from "./pages/map/map";
+import { MapPage } from "./pages/map/map";
 
 // Form
-import { FormStuffPage }            from "./pages/form-stuff/form-stuff";
+import { FormStuffPage } from "./pages/form-stuff/form-stuff";
 import { AuthModule } from "./pages/auth/auth.module";
 import { LoginComponent } from "./pages/auth/login/login.component";
 import { LayoutComponent } from "./layout/layout.component";

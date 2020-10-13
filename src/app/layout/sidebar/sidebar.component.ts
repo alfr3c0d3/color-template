@@ -17,6 +17,8 @@ import {
   ViewChild,
   OnInit,
   AfterViewChecked,
+  Injector,
+  AfterViewInit,
 } from "@angular/core";
 import pageMenus from "../../config/page-menus";
 import pageSettings from "../../config/page-settings";
@@ -85,7 +87,7 @@ export class SidebarComponent implements AfterViewChecked {
   }
 
   toggleNavProfile() {
-    if (this.navProfileState == "collapse") {
+    if (this.navProfileState === "collapse") {
       this.navProfileState = "expand";
     } else {
       this.navProfileState = "collapse";
@@ -99,16 +101,16 @@ export class SidebarComponent implements AfterViewChecked {
   }
 
   calculateFloatSubMenuPosition() {
-    var targetTop = this.pageFloatSubMenuOffset.top;
-    var direction = document.body.style.direction;
-    var windowHeight = window.innerHeight;
+    const targetTop = this.pageFloatSubMenuOffset.top;
+    const direction = document.body.style.direction;
+    const windowHeight = window.innerHeight;
 
     setTimeout(() => {
-      let targetElm = <HTMLElement>(
+      const targetElm = <HTMLElement>(
         document.querySelector(".float-sub-menu-container")
       );
-      let targetSidebar = <HTMLElement>document.getElementById("sidebar");
-      var targetHeight = targetElm.offsetHeight;
+      const targetSidebar = <HTMLElement>document.getElementById("sidebar");
+      const targetHeight = targetElm.offsetHeight;
       this.pageFloatSubMenuRight = "auto";
       this.pageFloatSubMenuLeft =
         this.pageFloatSubMenuOffset.width + targetSidebar.offsetLeft + "px";
@@ -124,7 +126,7 @@ export class SidebarComponent implements AfterViewChecked {
         this.pageFloatSubMenuTop = "auto";
         this.pageFloatSubMenuBottom = "0";
 
-        var arrowBottom = windowHeight - targetTop - 21;
+        const arrowBottom = windowHeight - targetTop - 21;
         this.pageFloatSubMenuArrowTop = "auto";
         this.pageFloatSubMenuArrowBottom = arrowBottom + "px";
         this.pageFloatSubMenuLineTop = "20px";
@@ -154,8 +156,8 @@ export class SidebarComponent implements AfterViewChecked {
   }
 
   expandCollapseSubmenu(currentMenu, allMenu, active) {
-    for (let menu of allMenu) {
-      if (menu != currentMenu) {
+    for (const menu of allMenu) {
+      if (menu !== currentMenu) {
         menu.state = "collapse";
       }
     }
@@ -173,24 +175,24 @@ export class SidebarComponent implements AfterViewChecked {
   }
 
   sidebarSearch(e: any) {
-    var value = e.target.value;
+    let value = e.target.value;
     value = value.toLowerCase();
 
     if (value) {
-      for (let menu of this.menus) {
-        var title = menu.title;
+      for (const menu of this.menus) {
+        let title = menu.title;
         title = title.toLowerCase();
 
         if (title.search(value) > -1) {
           menu["hide"] = false;
-          if (menu.submenu) {
+          if (menu.subMenu) {
             menu["state"] = "expand";
           }
         } else {
-          var hasSearch = false;
-          if (menu.submenu) {
-            for (var x = 0; x < menu.submenu.length; x++) {
-              var subtitle = menu.submenu[x].title;
+          let hasSearch = false;
+          if (menu.subMenu) {
+            for (let x = 0; x < menu.subMenu.length; x++) {
+              let subtitle = menu.subMenu[x].title;
               subtitle = subtitle.toLowerCase();
 
               if (subtitle.search(value) > -1) {
@@ -207,8 +209,8 @@ export class SidebarComponent implements AfterViewChecked {
         }
       }
     } else {
-      for (let menu of this.menus) {
-        menu["hide"] = "";
+      for (const menu of this.menus) {
+        menu["hide"] = false;
         menu["state"] = "";
       }
     }
